@@ -41,8 +41,8 @@ input:focus{
 }
 
 
-.inner-text{
-  padding-top:40px;
+.inner-text{  
+  padding-top:26px;
   text-align:center;
 }
 
@@ -155,7 +155,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 	       $sql= "INSERT INTO signup VALUES('$email','$password','$phn','$fname','$lname',' $city',' $add')";
          if($connection->query($sql) ===TRUE){
           $_SESSION['email']=$email;
-          header('location:/forum/alumini_forum/index.html');
+          header('location:/forum/alumini_forum/question.html');
           $connection->close();
           exit;
                }
@@ -208,10 +208,10 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 
     <input class="sign-up" type='submit' value='Sign-Up'>
   </div> 
-  
-    
-    
-  
+  <div class="login" style="margin: 5px;">
+  Already have an account?
+    <a href="/forum/alumini_forum/account/login.php" style="text-decoration: none;">login</a>
+  </div>
   </form>
 </div>
 

@@ -149,7 +149,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             $_SESSION["email"] = $email;
             echo $email;
             echo $password;
-            header('location:/forum/alumini_forum/index.html');
+            header('location:/forum/alumini_forum/question.html');
             exit;
           }
           else{
@@ -191,7 +191,7 @@ function result($data){
 
   </div> 
   <div class="forgot">
-  <a href="" style="text-decoration: none;color: red;font-style: initial;font-weight: 600;">forgot password?</a>
+  <a href="forgotpassword.html" style="text-decoration: none;color: red;font-style: initial;font-weight: 600;">forgot password?</a>
 </div> 
   
   </form>

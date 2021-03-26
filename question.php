@@ -17,28 +17,40 @@
 </head>
 <body>
 
-
+    <?php
+    session_start();
+    if(isset($_SESSION["email"])){
+        session_unset();
+        session_destroy();
+    }
+    else{
+        echo "You don't have permission";
+        die();
+    }
+    ?>
 
     <div class="content">
 
-        <nav><h2 class="head">Question Section</h2></nav>
+        <div class="Question">
+        <h2 class="head">Question Section</h2>
         <form action="submit.php" method="post"> 
-        
         <div class="question">
             <!-- title-->
             <label for="title" style="font-weight: bold;">Title</label><br>
-            <p class="discription">Give a title for your query</p>
+            <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <input type="text" id="title" name="title" size="50"> <br><br>
             <!-- body-->
-            <label for="body" style="font-weight: bold";>Body:</label><br>
-            <p class="discription">elaborate your query not more than 5 lines</p>
+            <label for="body" style="font-weight: bold;">Body:</label><br>
+            <p class="discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <textarea name="body" id="body" cols="80" rows="8" autofocus></textarea><br>
-
+            
         </div><br><br>
         <button class="btn btn-primary" type="submit" >Publish your Question
-        </button>
-        </form>   
-       
+        </button> </div>  
+    </form> 
+
+
+       <div class="instruct">
         <h2 class="head">Ask a Question</h2>
         <p>
         <ul>
@@ -49,7 +61,8 @@
         <li>Possible ways to get placed in our college.</li> 
         <li>Suggestions for our college atmosphere.</li>  
         </ul>  
-         </p>    
+         </p>   
+        </div>
     </div>
    
       <!-- footer -->
@@ -93,3 +106,4 @@
     
 </body>
 </html>
+ 
