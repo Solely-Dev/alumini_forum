@@ -23,8 +23,10 @@ body{
     display: none;
   }
 }
+
 .content{
   background-color: #EAEDED;
+  display: flex;
 }
 .head{
   padding: 36px 0;
